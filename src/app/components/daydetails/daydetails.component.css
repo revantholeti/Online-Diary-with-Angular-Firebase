@@ -1,0 +1,95 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+@font-face {
+    font-family: 'KaushanScript-Regular';
+    src: url('../../../assets/fonts/KaushanScript-Regular.woff');
+}
+
+@font-face {
+    font-family: 'Lilly__';
+    src: url('../../../assets/fonts/Lilly__.woff');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+.header{
+    margin-left:-100px;
+    position: relative;
+    left:50%;
+    font-family: 'KaushanScript-Regular';
+}
+
+h2{
+    border-right: 5px solid blue;
+    border-bottom: 3px solid lightblue;
+    border-radius: 50%;
+}
+textarea{
+    border-radius: 5px;
+    border:1px solid black;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+    font-family:'Lilly__';
+    resize: none;
+}
+
+textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 0.5px solid black;
+    font-size: 18px;
+  }
+
+  textarea:focus {
+    box-shadow: 0 0 5px rgb(0, 0, 0,1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgb(0, 0, 0,1);
+  }
+
+  label{
+      font-family: 'Lilly__';
+      font-size: 20px;
+      text-decoration: underline;
+  }
+
+  input#file {
+    display: inline-block;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 353px 0 0 0;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-size: 60px 60px;
+    cursor: pointer;
+    border:none;
+    margin-bottom:15px;
+  }
+
+  input#file:focus{
+    box-shadow: 0 0 5px rgb(0, 0, 0,1);
+  }
+
+  #datepicker{
+    border:none;
+    border-bottom: 1px solid black;
+    font-family: 'Lilly__'
+  }
+
+  #submit{
+    font-family: 'Lilly__';
+    height: 40px;
+    background-color: blueviolet;
+  }
+
+  .progress{
+    margin-top:0px;
+    margin-bottom:20px;
+}

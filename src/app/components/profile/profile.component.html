@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 profileimage">
+      <img src="{{imgUrl}}" alt="" class="image-responsive fit-image">
+    </div>
+    <div class="col-md-8">
+      <div>
+        <table class="table">
+          <tr>
+            <td>Name : </td>
+            <td>{{user?.displayName}}</td>
+          </tr>
+          <tr>
+            <td>Email : </td>
+            <td>{{user?.email}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="!change">
+    <div class="col-md-6">
+        <div class="card card-header" data-toggle="collapse" data-target="#namechage">How to call you?</div>
+        <div class="card collapse" id="namechage">
+          <div class="card-body">
+            <form [formGroup]="updateusername" (ngSubmit)="onSubmitUsername()">
+              <div class="form-group">
+                <label for="username">Name :</label>
+                <input type="text" class="form-control" placeholder="Name" formControlName="username">
+              </div>
+              <button type="submit" mat-raised-button color="primary" class="btn form-control">Submit</button>
+            </form>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card card-header" data-toggle="collapse" data-target="#passchange">Change Password</div>
+        <div class="card collapse" id="passchange">
+          <div class="card-body">
+              <form [formGroup]="changepassword" (ngSubmit)="onSubmitPassword()">
+                <div class="form-group">
+                  <label for="password">Old Password</label>
+                  <input type="password" name="oldpassword" class="form-control" formControlName="oldpassword" [class.is-invalid]="changepassword.get('oldpassword').invalid && changepassword.get('oldpassword').touched">
+                </div>
+                <div class="form-group">
+                  <label for="password">New Password</label>
+                  <input type="password" name="newpassword" class="form-control" formControlName="password">
+                </div>
+                <div class="form-group">
+                  <label for="password">Confirm Password</label>
+                  <input type="password" name="confirmpassword" class="form-control" formControlName="confirm_pass" [class.is-invalid]="changepassword.errors?.mismatch">
+                  <small class="text-danger" *ngIf="changepassword.errors?.mismatch">Confirm your password</small>
+                </div>
+                <button type="submit" mat-raised-button color="primary" class="btn form-control">Submit</button>
+              </form>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

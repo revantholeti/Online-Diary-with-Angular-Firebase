@@ -1,0 +1,30 @@
+.fit-image{
+    width: 100%;
+    object-fit: contain;
+    height: 300px;
+}
+.row{
+    margin-top:20px;
+}
+
+.container{
+    font-family: 'Lilly__';
+    font-size: 23px;
+}
+
+.table{
+    margin-top:20px;
+}
+
+.card{
+    font-size: 18px;
+}
+
+.col-md-6{
+    cursor: pointer;
+    margin-bottom:20px;
+}
+
+button{
+    font-family: 'Lilly__';
+}

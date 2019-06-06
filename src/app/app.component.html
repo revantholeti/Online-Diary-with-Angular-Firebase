@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" *ngIf="user?.email">
+    <mat-icon class="maticon" matRipple (click)="navtoggle();">reorder</mat-icon>
+    Online Diary
+    <span class="example-spacer"></span>
+    <div class="icon">
+            <button mat-mini-fab color="primary" style="font-size: 40px;" (click)="navigatetoProfile()"></button>
+    </div>
+</mat-toolbar>
+<mat-sidenav-container fullscreen [style.margin-top]="user?.email?'4em':'0em'">
+    <mat-sidenav [(opened)]="opened" >
+        <mat-nav-list (click)="navtoggle();">
+            <a mat-list-item routerLink="../Home" routerLinkActive="active">Home</a>
+            <a mat-list-item routerLink="../daysaver" routerLinkActive="active">Save your Day</a>
+            <a mat-list-item (click)="logout()" routerLinkActive="active">Logout</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content >
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

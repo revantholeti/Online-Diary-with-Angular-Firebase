@@ -1,0 +1,19 @@
+<div class="container form-container">
+  <div *ngIf="message" class="text-danger">{{message}}</div>
+  <form [formGroup]="registration" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input formControlName="email" type="email" [class.is-invalid]="email.invalid && email.touched" class="form-control" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" formControlName="password" placeholder="Password" required> 
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" [class.is-invalid]="registration.errors?.mismatch" formControlName="confirm_pass" placeholder="Confirm Password" required>
+      <small class="text-danger" *ngIf="registration.errors?.mismatch">Confirm your password</small>
+    </div>
+    <button type="submit" mat-raised-button color="primary">Register</button>
+  </form>
+  <div class="text-center">
+      Already have an accout?<a routerLink="../login"> Login</a>
+  </div>
+</div>

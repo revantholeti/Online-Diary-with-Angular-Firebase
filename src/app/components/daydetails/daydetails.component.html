@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="header">
+        <h2 class="mt-2">Write your day</h2>
+      </div>
+  </div>
+  <div class="text-danger" *ngIf="errormessage">{{errormessage}}</div> 
+  <div class="details">
+      <form [formGroup]="daydetails" (ngSubmit)="onSubmit()">
+          <div class="row mt-3">
+              <div class="col-md-8">
+                  
+                  <textarea placeholder="Day Details......" matInput rows="18" style="min-width: 100%" formControlName="data" [class.is-invalid]="daydetails.get('data').invalid && daydetails.get('data').touched" required></textarea>
+                  <small [class.d-none]="daydetails.get('data').valid || daydetails.get('data').untouched" class="text-danger">This feild is required</small>              
+                </div>
+              <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="date">Date</label> 
+                    <small [class.d-none]="daydetails.get('date').valid || daydetails.get('date').untouched" class="text-danger">Date is required</small> <br>
+                    <input id="datepicker" matInput [matDatepicker]="picker" formControlName="date" placeholder="Choose a date" required>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </div>
+                  <div class="image from-group">
+                    <label for="image">Choose image</label>
+                      <div class="progress" *ngIf="uploadProgress$ | async as progress">
+                        <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': progress + '%' }"></div>
+                        Progress: {{progress}}% Complete
+                      </div>
+                    <input accept="image/*" type='file' matRipple id="file" (change)="onSelectFile($event)" class="form-control btn btn-primary" [ngStyle]="{'background': 'url(' + imgSrc + ') center center / contain no-repeat #e4e4e4'}" formControlName="imageName">
+                  </div>  
+              </div>
+          </div>
+          <input type="submit" mat-raised-button matRipple class="btn btn-primary form-control" id="submit" [disabled]="daydetails.invalid">
+      </form>
+  </div>
+</div>

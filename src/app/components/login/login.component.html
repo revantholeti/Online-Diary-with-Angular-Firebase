@@ -1,0 +1,24 @@
+<div class="container form-container" >
+    <h2 class="text-center">Save your DAY</h2>
+    <div class="text-danger" *ngIf="errormessage" style="margin-bottom:20px;">{{errormessage}}</div> 
+    <div class="logindiv">
+        <div>
+            <form [formGroup]="user" (ngSubmit)="onSubmit()">
+                <div class="form-group" >
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" formControlName="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" formControlName="password" placeholder="Password" required>
+                </div>
+                <button id="email" mat-raised-button type="submit">Login</button>
+            </form>
+        </div>
+        <button  id="google" mat-raised-button (click)="loginwithgoogle()" class="mb-3">Login With Google</button>
+        <div class="text-center">
+            <a routerLink="../register">No account? Create one here</a>
+        </div>
+    </div>  
+</div>
+

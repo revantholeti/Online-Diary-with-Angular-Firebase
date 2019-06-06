@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@font-face {
+    font-family: 'Lilly__';
+    src: url('./assets/fonts/Lilly__.woff');
+}
+
+body {
+    
+    margin:0px;
+    height:100%;
+}
+
+
+
+
+mat-sidenav{
+    height:100%;
+    width:240px;
+    
+}
+
+a{
+    font-family: 'Lilly__';
+}

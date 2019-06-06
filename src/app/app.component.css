@@ -1,0 +1,25 @@
+mat-icon{
+    cursor: pointer;
+    margin-right:1em;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  mat-toolbar,a{
+      font-family: 'Lilly__'
+  }
+
+  .icon{
+      font-size: 30px;
+  }
+
+  button{
+    padding-left: 7px;
+    background-image: url('../assets/images/profile.svg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+  }

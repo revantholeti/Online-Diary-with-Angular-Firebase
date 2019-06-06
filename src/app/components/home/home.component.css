@@ -1,0 +1,100 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@font-face {
+    font-family: 'KaushanScript-Regular';
+    src: url('../../../assets/fonts/KaushanScript-Regular.woff');
+}
+
+mat-sidenav-container{
+    margin-top:4em;
+}
+
+.diarylist{
+    margin-top:30px;
+}
+
+#listitems{
+    margin-top:7px;
+    margin-bottom: 7px;
+    border:1px solid black;
+    font-family: 'Lilly__';
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-align: center;
+}
+
+label{
+    margin-bottom:0rem !important;
+    color:black;
+
+}
+
+#listitems:hover{
+    box-shadow: 0 0 5px rgb(0, 0, 0,1);
+    border: 1px solid rgb(0, 0, 0,1);
+}
+
+.header{
+    font-family: 'KaushanScript-Regular';
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    font-style: italic;
+    margin-top:30px;
+    text-align: center;
+}
+
+span{
+    position:relative;
+    top:1px;
+    display:inline-block;
+    box-shadow: 0 5px 10px black;
+    border-radius: 100px;
+}
+
+label:hover{
+    cursor: pointer;
+}
+
+.btn:hover{
+    color:white
+}
+
+#collapseExample{
+    margin-top:10px;
+}
+
+.basic-btn {
+    background: blueviolet;
+    color:white;
+    width:100px;
+    margin:0;
+    border:none;
+    margin-top:0px;
+}
+
+.card{
+    margin-top:30px;
+}
+
+.card-header{
+    background:blueviolet;
+    font-family: 'Lilly__';
+}
+
+.card-body{
+    font-family: 'Lilly__';
+}
+
+i{
+    margin-top:5px;
+    padding-bottom:10px;
+    font-size: 15px;
+    margin-right:5px;
+}
+
+.fit-image{
+    width: 100%;
+    object-fit: contain;
+    height: 300px; 
+}
+
